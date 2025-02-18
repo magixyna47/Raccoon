@@ -1,36 +1,49 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class RC_PlayerManager : MonoBehaviour
+namespace RC_Player
 {
-    public static RC_PlayerController Player;
-
-    private Action OnPlayerSpawned;
-
-    [SerializeField] private GameObject _playerPrefab;
-    [SerializeField] private Transform _playerSpawn;
-
-    private void Awake()
+    public class RC_PlayerManager : MonoBehaviour
     {
-        OnPlayerSpawned += SpawnPlayer;
-    }
+        public static RC_PlayerController Player;
 
-    private void Start()
-    {
-        OnPlayerSpawned?.Invoke();
-    }
-    
-    /// <summary>
-    /// Spawns in the _playerPrefab at _playerSpawn
-    /// </summary>
-    private void SpawnPlayer()
-    {
-        GameObject player = Instantiate(_playerPrefab, _playerSpawn.position, _playerSpawn.rotation);
-        player.name = "Player";
-    }
+        public static Action OnPlayerSpawned;
 
-    private void OnDestroy()
-    {
-        OnPlayerSpawned -= SpawnPlayer;
+        [SerializeField] private GameObject _playerPrefab;
+        [SerializeField] private Transform _playerSpawn;
+
+        private void Start()
+        {
+            SpawnPlayer();
+        }
+
+        /// <summary>
+        /// Spawns in the _playerPrefab at _playerSpawn
+        /// </summary>
+        private void SpawnPlayer()
+        {
+            GameObject player = Instantiate(_playerPrefab, _playerSpawn.position, _playerSpawn.rotation);
+            player.name = "Player";
+            SetupPlayer(player);
+            OnPlayerSpawned?.Invoke();
+        }
+
+        private void SetupPlayer(GameObject player)
+        {
+            if (Player == null)
+            {
+                Player = player.GetComponent<RC_PlayerController>();
+            }
+            else
+            {
+                Destroy(player);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            OnPlayerSpawned -= SpawnPlayer;
+        }
     }
 }
