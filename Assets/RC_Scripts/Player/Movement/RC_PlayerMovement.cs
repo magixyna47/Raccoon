@@ -21,7 +21,10 @@ public class RC_PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        if(!TryGetComponent<Rigidbody>(out _rigidbody))
+        {
+            Debug.LogWarning("No rigidbody attached");
+        }
     }
 
     private void OnMoveInput()
