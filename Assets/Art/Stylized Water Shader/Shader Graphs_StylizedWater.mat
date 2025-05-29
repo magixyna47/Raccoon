@@ -57,14 +57,22 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
+    - _DepthFadeDistance: 0.7
     - _DstBlend: 0
+    - _HorizonDistance: 10
     - _QueueControl: 1
     - _QueueOffset: 0
+    - _RefractionScale: 0.35
+    - _RefractionSpeed: 0.05
+    - _RefractionStrength: 0.02
     - _SrcBlend: 1
     - _Surface: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
-    m_Colors: []
+    m_Colors:
+    - _DeepColor: {r: 0.007145405, g: 0, b: 1, a: 0.7490196}
+    - _HorizonColor: {r: 1, g: 0.6408818, b: 0.49411762, a: 0}
+    - _ShallowColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.7490196}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
