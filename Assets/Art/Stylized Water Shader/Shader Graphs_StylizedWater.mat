@@ -38,6 +38,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _IntersectionFoamTexture:
+        m_Texture: {fileID: 2800000, guid: 716010ae70e1b4e84ba6baf439991fae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SurfaceFoamTexture:
+        m_Texture: {fileID: 2800000, guid: 756d6724924f2448ab273c1be1db34c8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -57,22 +65,44 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _DepthFadeDistance: 0.7
+    - _DepthFadeDistance: 0.5
+    - _Direction: 0
     - _DstBlend: 0
+    - _Float: 0
+    - _FoamBlend: 0.1
     - _HorizonDistance: 10
+    - _IntersectionFoamBlend: 0.8
+    - _IntersectionFoamCutoff: 1
+    - _IntersectionFoamDepth: 1.5
+    - _IntersectionFoamDirection: 0.5
+    - _IntersectionFoamFade: 1
+    - _IntersectionFoamSpeed: 0.1
+    - _IntersectionFoamTiling: 75
     - _QueueControl: 1
     - _QueueOffset: 0
     - _RefractionScale: 0.35
     - _RefractionSpeed: 0.05
     - _RefractionStrength: 0.02
+    - _Speed: 0
     - _SrcBlend: 1
     - _Surface: 0
+    - _SurfaceFoamBlend: 0.1
+    - _SurfaceFoamDirection: 0.5
+    - _SurfaceFoamDistortion: 2
+    - _SurfaceFoamSpeed: 0.1
+    - _SurfaceFoamTiling: 15
+    - _Tiling: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - _DeepColor: {r: 0.007145405, g: 0, b: 1, a: 0.7490196}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _HorizonColor: {r: 1, g: 0.6408818, b: 0.49411762, a: 0}
-    - _ShallowColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.7490196}
+    - _IntersectionFoamColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _ShallowColor: {r: 0.9, g: 0.9, b: 0.9, a: 0.7490196}
+    - _SurfaceFoamColor: {r: 1, g: 1, b: 1, a: 0}
+    - _UV: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
