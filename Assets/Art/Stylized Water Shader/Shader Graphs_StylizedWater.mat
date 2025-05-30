@@ -24,14 +24,14 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: e6a56a8a57c79fb459448f31b9a5082f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _WORLDSPACEUV
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -40,6 +40,10 @@ Material:
     m_TexEnvs:
     - _IntersectionFoamTexture:
         m_Texture: {fileID: 2800000, guid: 716010ae70e1b4e84ba6baf439991fae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalsTexture:
+        m_Texture: {fileID: 2800000, guid: ead3be67941d84de8806e2bdbc4a2d24, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SurfaceFoamTexture:
@@ -65,7 +69,7 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _DepthFadeDistance: 0.5
+    - _DepthFadeDistance: 0.8
     - _Direction: 0
     - _DstBlend: 0
     - _Float: 0
@@ -77,32 +81,43 @@ Material:
     - _IntersectionFoamDirection: 0.5
     - _IntersectionFoamFade: 1
     - _IntersectionFoamSpeed: 0.1
-    - _IntersectionFoamTiling: 75
+    - _IntersectionFoamTiling: 0.2
+    - _LightingHardness: 0.75
+    - _LightingSmoothness: 0.2
+    - _NormalsScale: 10
+    - _NormalsSpeed: 0.1
+    - _NormalsStrength: 0.3
     - _QueueControl: 1
     - _QueueOffset: 0
-    - _RefractionScale: 0.35
+    - _RefractionScale: 3.75
     - _RefractionSpeed: 0.05
-    - _RefractionStrength: 0.02
+    - _RefractionStrength: 0.01
     - _Speed: 0
     - _SrcBlend: 1
     - _Surface: 0
-    - _SurfaceFoamBlend: 0.1
-    - _SurfaceFoamDirection: 0.5
-    - _SurfaceFoamDistortion: 2
+    - _SurfaceFoamBlend: 0.02
+    - _SurfaceFoamDirection: 0
+    - _SurfaceFoamDistortion: 1.5
     - _SurfaceFoamSpeed: 0.1
-    - _SurfaceFoamTiling: 15
+    - _SurfaceFoamTiling: 0.3
     - _Tiling: 0
+    - _WORLDSPACEUV: 1
+    - _WaveLength: 2
+    - _WaveSpeed: 1
+    - _WaveSteepness: 0.25
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _DeepColor: {r: 0.007145405, g: 0, b: 1, a: 0.7490196}
+    - _DeepColor: {r: 0, g: 0.5638194, b: 1, a: 0.7490196}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _HorizonColor: {r: 1, g: 0.6408818, b: 0.49411762, a: 0}
     - _IntersectionFoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _ShallowColor: {r: 0.9, g: 0.9, b: 0.9, a: 0.7490196}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 0.18039216}
     - _SurfaceFoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _UV: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveDirections: {r: 8.96, g: -11.03, b: 6.49, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

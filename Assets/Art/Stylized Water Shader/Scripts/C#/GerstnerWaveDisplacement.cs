@@ -1,6 +1,5 @@
 using UnityEngine;
-
-public static class GerstnerWaveDisplacement
+public class GerstnerWaveDisplacement : MonoBehaviour
 {
     private static Vector3 GerstnerWave(Vector3 position, float steepness, float wavelength, float speed, float direction)
     {
